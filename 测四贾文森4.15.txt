@@ -1,0 +1,30 @@
+
+#include <iostream>
+#include <iomanip> 
+using namespace std; 
+
+int main()
+{
+   double sales; // gross weekly sales
+   double wage; // commissioned earnings
+   
+
+
+   cout << "Enter sales in dollars (-1 to end): ";
+   cin >> sales;
+
+   // set floating-point number format
+   cout << fixed << setprecision( 2 );
+
+   while ( sales != -1.0 ) 
+   {    
+      wage = 200.0 + 0.09 * sales; // calculate wage
+      cout << "Salary is: $" << wage; // display salary
+      
+
+      cout << "\n\nEnter sales in dollars (-1 to end): ";
+      cin >> sales;
+   } // end while
+} // end main
+
+
