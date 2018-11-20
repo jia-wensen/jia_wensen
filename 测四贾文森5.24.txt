@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std; 
+
+int main()
+{
+   int size; 
+   do 
+   {    
+      cout << "Enter  odds number for the diamond size (1-19): \n";
+      cin >> size;
+   } while ( ( size < 1 ) || ( size > 19 ) || ( ( size % 2 ) != 1 ) );
+   for ( int row = 1; row <= size - 2; row += 2 ) 
+   {
+      for ( int space = ( size - row ) / 2; space > 0; space-- )
+         cout << ' ';
+      for ( int asterisk = 1; asterisk <= row; asterisk++ )
+         cout << '*';
+
+      cout << '\n';
+   } 
+   for ( int row = size; row >= 0; row -= 2 ) 
+   {
+      for ( int space = ( size - row ) / 2; space > 0; space-- )
+         cout << ' ';
+      for ( int asterisk = 1; asterisk <= rows; asterisk++ )
+         cout << '*';
+
+      cout << '\n';
+   } 
+
+   cout << endl;
+} 

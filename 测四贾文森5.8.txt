@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std; 
+
+
+int main()
+{
+int number;
+int value;
+int smaller;
+
+
+cout <<"Enter the number of integers to be progressed";
+cout <<"followed by the integers:"
+     <<endl;
+cin  >>number>>smaller;
+for (int i=2;i<= number ;i++)
+   {
+       cin>>value;
+       if(value<smaller)
+        smaller=value;
+       
+}
+cout<<"the smaller integer is  "
+    <<smaller
+    <<endl;
+}   

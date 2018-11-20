@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std; 
+
+int main()
+{
+   int num; 
+   int factor; 
+
+   cout << "Decimal\t\tBinary\t\tOctal\tHexadecimal\n";
+
+   for ( int loop = 1; loop <= 256; loop++ ) 
+   {
+      cout << dec << loop << "\t\t";
+
+    
+      num = loop;
+      factor = 256;
+
+      cout << ( num == 256 ? '1' : '0' );
+  
+     
+      do 
+      {       
+         cout << 
+            ( num < factor && num>= ( factor / 2 ) ? '1' : '0' );
+
+        
+         factor /= 2;
+         num%= factor;
+      } while ( factor > 1 );
+
+     
+      cout << '\t' << oct << loop;
+
+  
+      cout << '\t' << hex << loop << endl;
+   } 
+} 

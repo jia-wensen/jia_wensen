@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+   int pro = 1;
+
+
+   
+   for ( int i = 3; i <= 15; i += 2 )
+      pro *= i;
+
+
+  
+   cout << "product of the odd integers from 1 to 15 is "
+      << pro << endl;
+} 

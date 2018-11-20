@@ -1,0 +1,37 @@
+#include <iostream>
+
+using namespace std;
+
+
+
+int main()
+
+{
+
+   int factor= 1; 
+
+
+
+   cout << "x\tx!\n";
+
+
+
+   for ( int i = 1; i <= 5; ++i)
+
+   {
+
+      factor *= i; 
+
+      
+
+     
+
+      cout << i << '\t' << factor << '\n';
+
+   } 
+
+
+
+   cout << endl;
+
+} 

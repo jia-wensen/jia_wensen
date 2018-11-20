@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+   int total = 0;
+   int num;
+   int value;
+
+
+
+
+   cout << "Enter the num of values to be summed "
+      << "followed by the values: \n";
+   cin >> num;
+
+
+
+
+   for ( int i = 1; i <= num; i++ )
+   {
+      cin >> value;
+      total += value;
+   }
+
+
+
+
+   cout << "Sum of the " << num << " values is " << total << endl;
+}
+
+
