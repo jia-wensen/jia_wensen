@@ -1,0 +1,17 @@
+#include <iostream> 
+#include "TestException.h"
+using namespace std;
+
+int main()
+{
+   // throw same exception from catch handler
+   try 
+   {
+      throw TestException( "This is a test" );
+   } // end try
+   catch ( TestException &t ) 
+   {
+      cerr << t.what() << endl;
+      throw TestException( "This is another test" );
+   } // end catch
+}

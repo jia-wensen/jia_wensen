@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+   try // throw int
+   {
+      int a = 7;
+      double b = 9.9;
+
+      // throw int to show that only the double catch handler executes
+      throw a < b ? a : b;
+   } // end try
+   catch ( int x ) // catch ints
+   {
+      cerr << "The int value " << x << " was thrown\n";
+   } // end catch
+   catch ( double y ) // catch doubles
+   {
+      cerr << "The double value " << y << " was thrown\n";
+   } // end catch
+} 

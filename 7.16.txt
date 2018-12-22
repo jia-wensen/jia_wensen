@@ -1,0 +1,25 @@
+#include <iostream> 
+#include "DerivedException1.h"
+#include "DerivedException2.h"
+using namespace std;
+
+int main()
+{
+   try // throw DerivedException1
+   {
+      throw ( DerivedException1( "DerivedException1" ) );
+   } // end try
+   catch ( runtime_error &exception ) // exceptions of runtime_error
+   {
+      cerr << exception.what() << endl;
+   } // end catch
+
+   try // throw DerivedException2
+   {
+      throw ( DerivedException2( "DerivedException2" ) );
+   } // end try
+   catch ( runtime_error &exception ) // exceptions of runtime_error
+   {
+      cerr << exception.what() << endl;
+   } // end catch
+}
