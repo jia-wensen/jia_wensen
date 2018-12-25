@@ -1,0 +1,17 @@
+#include <iostream> 
+#include <stdexcept>
+#include "ItemGroup.h"
+using namespace std;
+
+int main()
+{
+   cout << "Constructing an object of class ItemGroup\n";
+
+   try // create ItemGroup object
+   {
+      ItemGroup itemGroup;
+   } // end try
+   catch( runtime_error &exception ) 
+   {
+      cout << exception.what() << '\n';
+   }
