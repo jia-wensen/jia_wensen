@@ -1,0 +1,23 @@
+#include <iostream> 
+#include <string> 
+using namespace std;
+
+int main()
+{
+   string m; // to store input
+   int key = 13; // Our key for decryption
+
+   cout << "Enter encrypted string: ";
+   getline( cin, m );
+
+   // define an iterator
+   string::iterator mi = m.begin();
+
+   // loop through the string
+   while ( mi != m.end() ) 
+   {
+      *mi -= key;  
+      mi++;
+   } // end while
+
+   cout << "\nDecrypted string is: " << m << endl;
