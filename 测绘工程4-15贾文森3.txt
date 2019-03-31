@@ -1,0 +1,62 @@
+#include "PolynomialAdd.h"  
+#include "PolynomialMultiply.h"
+template <class T>
+T get_value(const string& content)
+{
+    string value;
+    cout << content;
+    cin >> value;
+    return StrToTtype<T>(value);
+}
+
+template <class T>
+T StrToTtype(const string& s_num)
+{
+    T n_num;
+    strstream ss_num;
+    ss_num << s_num;
+    ss_num >> n_num;
+    return n_num;
+}
+
+void construct_polynomial(Polynomial* linkedList)
+{
+    Term *lastNode = linkedList->GetHead();
+    float coef = get_value<float>("newNode->coef = ");
+    int exp = get_value<int>("newNode->exp = ");
+    while ((coef != 0) && (exp >= 0))
+    {
+        lastNode = linkedList->InsertAfter(lastNode, coef, exp);
+        coef = get_value<float>("newNode->coef = ");
+        exp = get_value<int>("newNode->exp = ");
+    }
+    linkedList->Sort();
+    linkedList->Output();
+}
+
+
+int main(int argc, char* argv[])
+{
+    Polynomial *polynomial1 = new Polynomial;
+    construct_polynomial(polynomial1);
+
+
+    Polynomial *polynomial2 = new Polynomial;
+    construct_polynomial(polynomial2);
+
+
+    Polynomial adddest = (*polynomial1) + (*polynomial2);
+    adddest.Output();
+
+
+    Polynomial multiplydest = (*polynomial1) * (*polynomial2);
+    multiplydest.Output();
+
+
+    delete polynomial1;
+    delete polynomial2;
+
+
+    system("pause");
+    return 0;
+}

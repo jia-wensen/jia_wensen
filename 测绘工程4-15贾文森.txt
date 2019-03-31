@@ -1,0 +1,38 @@
+#ifndef 156165_H_INCLUDED
+#define 156165_H_INCLUDED
+class Polynomial
+{
+public:
+    Polynomial();
+    Polynomial(int _size);
+    Polynomial(const Polynomial &poly);
+    Polynomial(double* _coefficients,int _size);
+    ~Polynomial();
+    void telllnfor ();
+    void setcoefficient(int num,double coefficient);
+    double getcofficient(int num);
+    Polynomial& operator=(const Polynomial& poly);
+    friend Polynomial operator+(const Polynomial& poly,double num);
+    friend Polynomial operator+(double num,const Polynomial& poly);
+    friend Polynomial operator-(const Polynomial& poly,double num);
+    friend Polynomial operator-(double num,const Polynomial& poly);
+    friend Polynomial operator*(const Polynomial& poly,double num);
+    friend Polynomial operator*(double num,const Polynomial& poly);
+    
+     friend Polynomial operator+(const Polynomial& p1,const Polynomial& p2);
+     friend Polynomial operator-(const Polynomial& p1,const Polynomial& p2);
+     friend Polynomial operator*(const Polynomial& p1,const Polynomial& p2);
+     
+private:
+    double *coefficients;
+    int size;
+    
+    
+
+
+
+
+}
+
+
+#endif // 156165_H_INCLUDED
